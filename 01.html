@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="input1" type="text">
+    <input id="input2" type="text">
+    <input id="input3" type="text">
+    <button onclick="fun()">Click me</button>
+    <br><br>
+    <table width="100%" border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <td>FirstName</td>
+            <td>MiddelName</td>
+            <td>LastName</td>
+        </tr>
+        <tr>
+            <td id="a"></td>
+            <td id="b"></td>
+            <td id="c"></td>
+        </tr>
+        <tr>
+            <td><button onclick="clear1()">clear</button></td>
+            <td><button onclick="clear2()">clear</button></td>
+            <td><button onclick="clear3()">clear</button></td>
+        </tr>
+    </table>
+
+    <script>
+
+        function fun() {
+            let inputvalue = document.getElementById('input1').value;
+            let inputvalue2 = document.getElementById('input2').value;
+            let inputvalue3 = document.getElementById('input3').value;
+            // console.log(inputvalue);
+            document.getElementById('a').innerHTML = inputvalue;
+            document.getElementById('b').innerHTML = inputvalue2;
+            document.getElementById('c').innerHTML = inputvalue3;
+        }
+
+        let MiddelName = document.getElementById('b').value;
+        let LastName = document.getElementById('c').value;
+
+        function clear1() {
+         document.getElementById('a').innerHTML = ' ';
+        }
+        function clear2() {
+         document.getElementById('b').innerHTML = ' ';
+        }
+        function clear3() {
+         document.getElementById('c').innerHTML = ' ';
+        }
+    </script>
+</body>
+
+</html>
