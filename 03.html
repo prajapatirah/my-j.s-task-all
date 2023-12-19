@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="input">
+    <input type="submit" name="" value="Sumbit" onclick="sum()">
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <td>String</td>
+            <td id="String"></td>
+        </tr>
+        <tr>
+            <td>Boolien</td>
+            <td id="Boolien"></td>
+        </tr>
+        <tr>
+            <td>Number</td>
+            <td id="Number"></td>
+        </tr>
+        <tr>
+            <td>Object</td>
+            <td id="Object"></td>
+        </tr>
+        <tr>
+            <td>Undifined</td>
+            <td id="Undifined"></td>
+        </tr>
+        <tr>
+            <td>Aray</td>
+            <td id="Aray"></td>
+        </tr>
+    </table>
+
+
+
+    <script>
+        function sum(){
+            let value = parseInt(document.getElementById('input')).value;
+
+            if(typeof value == "string"){
+                document.getElementById('String').innerHTML = value;
+            }
+            else if(typeof value == "number"){
+                document.getElementById('Number').innerHTML = value;
+            }
+        }
+
+
+
+
+    </script>
+</body>
+</html>

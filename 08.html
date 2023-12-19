@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <button onclick="fun()">mm to cm</button>
+    <button onclick="fun2()">cm to m</button>
+    <button onclick="fun3()">m to km</button>
+    <button onclick="fun4()">km to m</button>
+    <h1 id="demo"></h1>
+    <script>
+        function fun() {
+            function fun1(mm) {
+                return mm / 10;
+            }
+            let input = parseInt(document.getElementById('input').value); 
+            let cm = fun1(input);
+            document.getElementById('demo').innerHTML = cm;
+        }
+
+        function fun2() {
+            function fun1(cm) {
+                return cm / 100;
+            }
+            let input = parseInt(document.getElementById('input').value); 
+            let m = fun1(input);
+            document.getElementById('demo').innerHTML = m;
+        }
+
+        function fun3() {
+            function fun1(m) {
+                return m / 1000;
+            }
+            let input = parseInt(document.getElementById('input').value); 
+            let km = fun1(input);
+            document.getElementById('demo').innerHTML = km;
+        }
+
+        function fun4() {
+            function fun1(km) {
+                return km * 1000;
+            }
+            let input = parseInt(document.getElementById('input').value); 
+            let m1 = fun1(input);
+            document.getElementById('demo').innerHTML = m1;
+        }
+
+    </script>
+</body>
+
+</html>
