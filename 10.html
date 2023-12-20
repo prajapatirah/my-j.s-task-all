@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <input type="text" id="input2"> <br><br>
+    <button onclick="fun1()">a+=b</button>
+    <button onclick="fun2()">a-=b</button>
+    <button onclick="fun3()">b-=b</button>
+    <button onclick="fun4()">a*=b</button>
+    <button onclick="fun5()">a/=b</button>
+    <button onclick="fun6()">a%=b</button>
+    <button onclick="fun7()">a**=b</button>
+    <h1 id="demo"></h1>
+    <script>
+        function fun1(){
+            let input1 = Number(document.getElementById('input1').value);
+            let input2 = Number(document.getElementById('input2').value);
+           let ans = input1+=input2
+           document.getElementById('demo').innerHTML = "a=a+b= "+ans;
+        }
+
+        function fun2(){
+            let input1 = Number(document.getElementById('input1').value);
+            let input2 = Number(document.getElementById('input2').value);
+           let ans = input1-=input2
+           document.getElementById('demo').innerHTML = "a=a-b= "+ans;
+        }
+        function fun3(){
+            let input1 = Number(document.getElementById('input1').value);
+            let input2 = Number(document.getElementById('input2').value);
+           let ans = input2 -=input1
+           document.getElementById('demo').innerHTML = "b=b-a= "+ans;
+        }
+        function fun4(){
+            let input1 = Number(document.getElementById('input1').value);
+            let input2 = Number(document.getElementById('input2').value);
+           let ans = input1*=input2
+           document.getElementById('demo').innerHTML = "a=a*b= "+ans;
+        }
+        function fun5(){
+            let input1 = Number(document.getElementById('input1').value);
+            let input2 = Number(document.getElementById('input2').value);
+           let ans = input1/=input2
+           document.getElementById('demo').innerHTML = "a=a/b= "+ans;
+        }
+
+        function fun6(){
+            let input1 = Number(document.getElementById('input1').value);
+            let input2 = Number(document.getElementById('input2').value);
+           let ans = input1%=input2
+           document.getElementById('demo').innerHTML = "a=a%b= "+ans;
+        }
+
+        function fun7(){
+            let input1 = Number(document.getElementById('input1').value);
+            let input2 = Number(document.getElementById('input2').value);
+           let ans = input1**=input2
+           document.getElementById('demo').innerHTML = "a=a**b= "+ans;
+        }
+        
+
+    </script>
+</body>
+</html>

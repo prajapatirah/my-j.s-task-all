@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Normal Tag</legend>
+        <input type="text" name="" id="NormalTag">
+        <input type="text" id="val1">
+        <button onclick="normal()">Sumbit</button>
+        <div id="out"></div>
+    </fieldset>
+    <fieldset>
+        <legend>img</legend>
+        <input type="text" id="imgtag">
+        <input type="text" id="val2">
+        <input type="text" id="hight">
+        <button onclick="img()">Sumbit</button>
+        <div id="out2"></div>
+    </fieldset>
+    <fieldset>
+        <legend>Anchor</legend>
+        <input type="text" id="atag">
+        <input type="text" id="link">
+        <input type="text" id="val3">
+        <button onclick="atag()">Sumbit</button>
+        <div id="out3"></div>
+    </fieldset>
+    <fieldset>
+        <legend>ol-ul</legend>
+        <input type="text" name="" id="ol">
+        <input type="text" name="" id="li">
+        <input type="text" name="" id="val4">
+        <input type="text" name="" id="val5">
+        <button onclick="ol()">submit</button>
+        <div id="out4"></div>
+    </fieldset>
+    <fieldset>
+        <legend>Video tag</legend>
+        <input type="text" name="" id="video">
+        <input type="text" name="" id="source">
+        <input type="text" name="" id="value6">
+        <button onclick="video()">Submit</button>
+        <div id="out6"></div>
+    </fieldset><br>
+    <fieldset>
+        <legend>Audio tag</legend>
+        <input type="text" name="" id="audio">
+        <input type="text" name="" id="source2">
+        <input type="text" name="" id="value7">
+        <button onclick="audio()">submit</button>
+        <div id="out7"></div>
+    </fieldset>
+</body>
+<script>
+   function normal(){
+    let NormalTag = document.getElementById('NormalTag').value;
+    let val1 = document.getElementById('val1').value;
+    document.getElementById('out').innerHTML = '<'+NormalTag+'>'+val1+'<'+NormalTag+'>'
+   }
+   function img(){
+    let imgtag = document.getElementById('imgtag').value;
+    let val2 = document.getElementById('val2').value;
+    let hight = document.getElementById('hight').value;
+    document.getElementById('out2').innerHTML = "<"+imgtag+ " src='"+val2+"' height='"+hight+"'>"
+   }
+   function atag(){
+    let atag = document.getElementById('atag').value;
+    let link = document.getElementById('link').value;
+    let val3 = document.getElementById('val3').value;
+    document.getElementById('out3').innerHTML = "<"+atag+" href='"+link+"'>"+val3+"<"+atag+">"
+   }
+   function ol(){
+    let ol = document.getElementById('ol').value;
+    let li = document.getElementById('li').value;
+    let val4 = document.getElementById('val4').value; 
+    let val5 = document.getElementById('val5').value;
+    document.getElementById('out4').innerHTML = "<"+ol+">"+"<"+li+">"+val4+"</"+li+">"+"<"+li+">"+val5+"<"+ol+">"+"<"+li+">"+val5+"</"+li+">"+"</"+ol+">"
+   }
+   function video(){
+    let video = document.getElementById('video').value;
+    let source = document.getElementById('source').value;
+    let val6 = document.getElementById('value6').value;
+    document.getElementById('out6').innerHTML = "<"+video+ " controls"+">"+"<"+source+" src='"+value6+"'>"+"</"+video+">"
+   }
+   function audio(){
+    let audio = document.getElementById('audio').value;
+    let source2 = document.getElementById('source2').value;
+    let val7 = document.getElementById('value7').value;
+    document.getElementById('out7').innerHTML = "<"+audio+" controls"+">"+"<"+source2+ " src='"+value7+"'>"+"</"+audio+">"
+   }
+</script>
+</html>
