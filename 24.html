@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fun()">Sumbit</button>
+    <h1 id="h1"></h1>
+    <h1 id="h2"></h1>
+    <h1 id="h3"></h1>
+    <h1 id="demo"></h1>
+    <script>
+        function fun(){
+            let val1 = Number(prompt('enter a number'));
+            let val2 = Number(prompt('enter a number'));
+            let val3 = Number(prompt('enter a number'));
+            document.getElementById('h1').innerHTML = `First Number: ${val1}`;
+            document.getElementById('h2').innerHTML = `Second Number: ${val2}`;
+            document.getElementById('h3').innerHTML = `Second Number: ${val3}`;
+            if((val1%10) && (val2%10 == val3%10)){
+                document.getElementById('demo').innerHTML = 'Last Digit Are Same';
+            }
+            else{
+                document.getElementById('demo').innerHTML = 'Last Digit Are Not Same';
+            }
+        }
+    </script>
+</body>
+</html>

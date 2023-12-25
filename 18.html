@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fun()">Sumbit</button>
+    <h1 id="demo"></h1>
+    <script>
+        function fun(){
+            let monthnumber = parseInt(prompt("enter a month number"));
+
+            if(monthnumber == 1){
+                document.getElementById('demo').innerHTML = monthnumber+". 31 Day In January Month"
+            }
+            else if(monthnumber == 2){
+                document.getElementById('demo').innerHTML = monthnumber+". 29 Day In February Month"
+            }
+            else if(monthnumber == 3){
+                document.getElementById('demo').innerHTML = monthnumber+". 31 Day In March Month"
+            }
+            else if(monthnumber == 4){
+                document.getElementById('demo').innerHTML = monthnumber+". 30 Day In April Month"
+            }
+            else if(monthnumber == 5){
+                document.getElementById('demo').innerHTML = monthnumber+". 31 Day In may Month"
+            }
+            else if(monthnumber == 6){
+                document.getElementById('demo').innerHTML = monthnumber+". 30 Day In jun Month"
+            }
+            else if(monthnumber == 7){
+                document.getElementById('demo').innerHTML = monthnumber+". 31 Day In Julay Month"
+            }
+            else if(monthnumber == 8){
+                document.getElementById('demo').innerHTML = monthnumber+". 30 Day In Julay Month"
+            }
+            else if(monthnumber == 9){
+                document.getElementById('demo').innerHTML = monthnumber+". 31 Day In Saptember Month"
+            }
+            else if(monthnumber == 10){
+                document.getElementById('demo').innerHTML = monthnumber+". 30 Day In Octomber Month"
+            }
+            else if(monthnumber == 11){
+                document.getElementById('demo').innerHTML = monthnumber+". 31 Day In Navember Month"
+            }
+            else{
+                document.getElementById('demo').innerHTML = monthnumber+". 30 Day In Desember Month"
+            }
+        }
+    </script>
+</body>
+</html>

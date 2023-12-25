@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" cellpadding="15" cellspacing="0" width="50%">
+        <tr>
+            <td>Maths</td>
+            <td>Sci</td>
+            <td>Eng</td>
+            <td>Hindi</td>
+            <td>Total</td>
+            <td>Pre(%)</td>
+            <td>Grade</td>
+            <td>Result</td>
+        </tr>
+        <tr>
+            <td id="a1"></td>
+            <td id="a2"></td>
+            <td id="a3"></td>
+            <td id="a4"></td>
+            <td id="a5"></td>
+            <td id="a6"></td>
+            <td id="a7"></td>
+            <td id="a8"></td>
+        </tr>
+    </table><br><br>
+    <button onclick="fun()">Sumbit</button>
+</body>
+<script>
+    function fun(){
+        let Maths = Number(prompt('Enter maths number'));
+        let Sci = Number(prompt('Enter sci number'));
+        let Eng = Number(prompt('Enter eng number'));
+        let Hindi = Number(prompt('Enter hindi number'));
+        
+        document.getElementById('a1').innerHTML = Maths
+        document.getElementById('a2').innerHTML = Sci
+        document.getElementById('a3').innerHTML = Eng
+        document.getElementById('a4').innerHTML = Hindi
+        
+        let Total = Maths + Sci + Eng + Hindi;
+        let Pre = Total/4
+        document.getElementById('a5').innerHTML = Total+"/400"
+        document.getElementById('a6').innerHTML = Pre
+
+        if((Total/4>=90)&& (maths>=33 && sci>=33 && eng>=33 && hindi>=33 )){
+        document.getElementById('a7').innerHTML="A+"
+        document.getElementById('a8').innerHTML="Pass"
+        }
+        else if((Total/4<90 && Total/4>80) && (maths>=33 && sci>=33 && eng>=33 && hindi>=33 )){
+        document.getElementById('a7').innerHTML="A"
+        document.getElementById('a8').innerHTML="Pass"
+        }
+        else if((Total/4<=80 && Total/4>70)&& (maths>=33 && sci>=33 && eng>=33 && hindi>=33 )){
+        document.getElementById('a7').innerHTML="B+"
+        document.getElementById('a8').innerHTML="Pass"
+        }
+        else if((Total/4<=70 && Total/4>60)&& (maths>=33 && sci>=33 && eng>=33 && hindi>=33 )){
+        document.getElementById('a7').innerHTML="B"
+        document.getElementById('a8').innerHTML="Pass"
+        }
+        else if((Total/4<=60 && Total/4>50)&& (maths>=33 && sci>=33 && eng>=33 && hindi>=33 )){
+        document.getElementById('a7').innerHTML="C"
+        document.getElementById('a8').innerHTML="Pass"
+        }
+        else if((Total/4<=50 && Total/4>=33)&& (maths>=33 && sci>=33 && eng>=33 && hindi>=33 )){
+        document.getElementById('a7').innerHTML="D"
+        document.getElementById('a8').innerHTML="Pass"
+        }
+        else if((Total/4<33)|| (maths<33 && sci<33 && eng<33 && hindi<33 )){
+        document.getElementById('a7').innerHTML="--"
+        document.getElementById('a8').innerHTML="Fail"
+        }
+
+        // if((Pre > 90) && (Maths>=33 && Sci >= 33 && Eng >= 33 && Hindi >= 33)){
+        //     document.getElementById('a7').innerHTML = 'A+';
+        //     document.getElementById('a8').innerHTML = 'Pass';
+        // }
+        // else if((Total/4<90 && Total/4>80) && (maths>=33 && sci>=33 && eng>=33 && hindi>=33 )){
+        // document.getElementById('a7').innerHTML="A"
+        // document.getElementById('a8').innerHTML="Pass"
+        // }
+        // else if((Pre <= 80 && Pre > 70) && (Maths >= 33 && Sci >= 33 && Eng >= 33 && Hindi >= 33)){
+        //     document.getElementById('a7').innerHTML = 'B+';
+        //     document.getElementById('a8').innerHTML = 'Pass';
+        // }
+        // else if((Pre <= 70 && Pre > 60) && (Maths >= 33 && Sci >= 33 && Eng >= 33 && Hindi >= 33)){
+        //     document.getElementById('a7').innerHTML = 'B';
+        //     document.getElementById('a8').innerHTML = 'Pass';
+        // }
+        // else if((Pre <= 60 && Pre > 50) && (Maths >= 33 && Sci >= 33 && Eng >= 33 && Hindi >= 33)){
+        //     document.getElementById('a7').innerHTML = 'C';
+        //     document.getElementById('a8').innerHTML = 'Pass'
+        // }
+        // else if((Pre <= 50 && Pre >= 33) && (Maths >= 33 && Sci >= 33 && Eng >= 33 && Hindi >= 33)){
+        //     document.getElementById('a7').innerHTML = 'D';
+        //     document.getElementById('a8').innerHTML = 'Pass'
+        // }
+        // else if((Pre < 33) && (Maths >= 33 && Sci >= 33 && Eng >= 33 && Hindi >= 33)){
+        //     document.getElementById('a7').innerHTML = "E";
+        //     document.getElementById('a8').innerHTML = 'Fail';
+        // }
+    }
+</script>
+</html>

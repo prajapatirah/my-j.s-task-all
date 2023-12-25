@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fun()">Sumbit</button>
+    <h1 id="demo"></h1>
+    <script>
+        function fun(){
+            let a = (prompt('Enter a number'));
+            let b = (prompt('Enter b number'));
+            let c = (prompt('Enter c number'));
+
+            document.getElementById('demo').innerHTML = '<'+a+" scrollamount='"+b+"'>"+c+"</"+a+">"
+        }
+    </script>
+</body>
+</html>
