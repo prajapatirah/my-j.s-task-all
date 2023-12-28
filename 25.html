@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" cellpadding="10" id="table">
+        <tr>
+            <td>No</td>
+            <td>Name</td>
+            <td>Maths</td>
+            <td>Sci</td>
+            <td>Eng</td>
+            <td>Hindi</td>
+            <td>Total</td>
+            <td>Pre(%)</td>
+            <td>Grade</td>
+            <td>Result</td>
+        </tr>
+    </table>
+    <button onclick="fun()">Enter Dateil</button>
+    <script>
+        function fun() {
+            let no = Number(prompt('enter a number'));
+            let name = prompt('enter a name');
+            let maths = Number(prompt('enter a maths'));
+            let sci = Number(prompt('enter a sci'));
+            let eng = Number(prompt('enter a eng'));
+            let hindi = Number(prompt('enter a hindi'));
+            
+            let total_1 = maths + sci + eng + hindi
+            let pre_1 = total_1 / 4;
+            let grade = '';
+            let result = '';
+            
+            
+            if ((pre_1 < 100 && pre_1 >= 90)) {
+                grade = 'A+'
+                result = 'Pass'
+            }
+            else if ((pre_1 < 90 && pre_1 >= 80)) {
+                grade = 'A'
+                result = 'Pass'
+            }
+            else if ((pre_1 < 80 && pre_1 >= 70)) {
+                grade = 'B+'
+                result = 'Pass'
+            }
+            else if ((pre_1 >70 && pre_1 >= 60)) {
+              grade = 'B';
+              result = 'Pass'
+            }
+            else if ((pre_1 >60 && pre_1 >= 50)) {
+              grade = 'C';
+               result= 'Pass'
+            }
+            else if ((pre_1 >50 && pre_1 >= 33)) {
+                grade = 'D'
+                result= 'Pass'
+            }
+            else if (pre_1 < 33 && pre_1>=0) {
+              grade= 'E';
+               result= 'Fail'
+            }
+            else if(pre_1 <= 101){
+                window.alert('Plase Enter a True Datail')
+            }
+            document.getElementById('table').innerHTML+=`<tr>
+            <td>`+no+`</td>
+            <td>`+name+`</td>
+            <td>`+maths+`</td>
+            <td>`+sci+`</td>
+            <td>`+eng+`</td>
+            <td>`+hindi+`</td>
+            <td>`+total_1+`</td>
+            <td>`+pre_1+"%"+`</td>
+            <td>`+grade+`</td>
+            <td>`+result+`</td></tr>`
+        }
+            
+            
+    </script>
+</body>
+
+</html>

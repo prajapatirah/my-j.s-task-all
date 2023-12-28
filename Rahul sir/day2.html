@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/cdn.jsdelivr.net_npm_bootstrap@4.6.2_dist_css_bootstrap.min.css">
+    <style>
+        body{
+            background: #8e4a4a;
+            padding: 20px;
+        }
+        .center{
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        img{
+            position: absolute;
+            top: 15%;
+            left: 25%;
+            border-radius: 20px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        .btn{
+            font-size: small;
+        }
+        .container{
+            /* border: 1px solid; */
+            height: 190px;
+        }
+        @media screen and (min-width:200px) and (max-width:567px){
+            .center{
+            position: relative;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%,-20%);
+            display: flex;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <button class="btn btn-dark" onclick="Left()" >Left</button>
+        <button class="btn btn-danger" onclick="right()" >Right</button>
+        <button class="btn btn-dark" onclick="center()">Center</button>
+        <button class="btn btn-danger" onclick="Top()">Top</button>
+        <button class="btn btn-dark" onclick="botom()">Botom</button>
+    </div>
+    <div class="container">
+        <img id="img" src="https://images.pexels.com/photos/38275/anonymous-studio-figure-photography-facial-mask-38275.jpeg" width="50%" alt="">
+    </div>
+</body>
+<script>
+    function Left(){
+        document.getElementById('img').style.position = 'absolute'; 
+        document.getElementById('img').style.left = '0%'; 
+    }
+    function right(){
+        document.getElementById('img').style.position = 'absolute'
+        document.getElementById('img').style.left = '50%'; 
+    }
+    function center(){
+        document.getElementById('img').style.position = 'absolute'
+        document.getElementById('img').style.left = '25%'; 
+        document.getElementById('img').style.top = '15%'; 
+    }
+    function Top(){
+        document.getElementById('img').style.position = 'absolute'
+        document.getElementById('img').style.top = '0%'; 
+        document.getElementById('img').style.zIndex = '-1'; 
+    }
+    function botom(){
+        document.getElementById('img').style.position = 'absolute'
+        document.getElementById('img').style.top = '26%'; 
+    }
+</script>
+</html>

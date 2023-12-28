@@ -1,215 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/cdn.jsdelivr.net_npm_bootstrap@4.6.2_dist_css_bootstrap.min.css">
     <style>
-        .text{
+        body {
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+
+        .text {
             background: #f2ff00;
             max-width: fit-content;
             position: absolute;
             top: 5%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             border: 2px solid;
             padding: 5px;
             border-radius: 5px;
         }
-        .text:hover{
+
+        .text:hover {
             box-shadow: 3px 3px 20px #494949;
             transition: .5s all ease-in-out;
         }
-        table{
+
+        table {
             position: absolute;
             top: 10%;
-            left: 10%;
+            left: 15%;
+        }
+
+        #rd {
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #rd::after{
+            content: '';
+            width: 200%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -50%;
+            background: #000;
+            border-radius: 15px;
+            animation-name: rd ;
+            animation-duration: 5s;
+        }
+        @keyframes rd {
+            100%{
+                width: 100vh;
+            }
         }
     </style>
 </head>
+
 <body>
-         <h2 class="text-center text">STUDENTS MARKSITE</h2> <br><br>
-            <table class="text-center" border="1" cellspacing="0" cellpadding="10">
-                <tr>
-                    <td rowspan="2">No.</td>
-                    <td rowspan="2">NAME</td>
-                    <td colspan="3" >SUBJECT</td>
-                    <td colspan="2">RESULT</td>
-                </tr>
-                <tr>
-                    <td>MATH</td>
-                    <td>CHEMSTRY</td>
-                    <td>PHYSIC</td>
-                    <td>TOTAL</td>
-                    <td>PERCENTAGE(%)</td>
-                </tr>
-                <tr>
-                    <td>1.</td>
-                    <td>Vikash Modi</td>
-                    <td><input id="input1" type="text"></td>
-                    <td><input id="input2" type="text"></td>
-                    <td><input id="input3" type="text"></td>
-                    <td id="sub1_total"> </td>
-                    <td id="sub1_pre"> </td>
-                </tr>
-                <tr>
-                    <td>2.</td>
-                    <td>Vishal Modi</td>
-                    <td><input id="input4" type="text"></td>
-                    <td><input id="input5" type="text"></td>
-                    <td><input id="input6" type="text"></td>
-                    <td id="sub2_total"> </td>
-                    <td id="sub2_pre"> </td>
-                </tr>
-                <tr>
-                    <td>3.</td>
-                    <td>Nitin Patel</td>
-                    <td><input id="input7" type="text"></td>
-                    <td><input id="input8" type="text"></td>
-                    <td><input id="input9" type="text"></td>
-                    <td id="sub3_total"> </td>
-                    <td id="sub3_pre"> </td>
-                </tr>
-                <tr>
-                    <td>4.</td>
-                    <td>Chirag Galchar</td>
-                    <td><input id="input10" type="text"></td>
-                    <td><input id="input11" type="text"></td>
-                    <td><input id="input12" type="text"></td>
-                    <td id="sub4_total"> </td>
-                    <td id="sub4_pre"> </td>
-                </tr>
-                <tr>
-                    <td>5.</td>
-                    <td>Mukesh Patel</td>
-                    <td><input id="input13" type="text"></td>
-                    <td><input id="input14" type="text"></td>
-                    <td><input id="input15" type="text"></td>
-                    <td id="sub5_total"> </td>
-                    <td id="sub5_pre"> </td>
-                </tr>
-                <tr>
-                    <td>6.</td>
-                    <td>Rahul Mali</td>
-                    <td><input id="input16" type="text"></td>
-                    <td><input id="input17" type="text"></td>
-                    <td><input id="input18" type="text"></td>
-                    <td id="sub6_total"> </td>
-                    <td id="sub6_pre"> </td>
-                <tr>
-                    <td>7.</td>
-                    <td>Kundan Mevada</td>
-                    <td><input id="input19" type="text"></td>
-                    <td><input id="input20" type="text"></td>
-                    <td><input id="input21" type="text"></td>
-                    <td id="sub7_total"> </td>
-                    <td id="sub7_pre"> </td>
-                </tr>
-                <tr>
-                    <td>8.</td>
-                    <td>Pratham Pawala</td>
-                    <td><input id="input22" type="text"></td>
-                    <td><input id="input23" type="text"></td>
-                    <td><input id="input24" type="text"></td>
-                    <td id="sub8_total"> </td>
-                    <td id="sub8_pre"> </td>
-                </tr>
-                <tr>
-                    <td>9.</td>
-                    <td>Ravi Thakor</td>
-                    <td><input id="input25" type="text"></td>
-                    <td><input id="input26" type="text"></td>
-                    <td><input id="input27" type="text"></td>
-                    <td id="sub9_total"> </td>
-                    <td id="sub9_pre"> </td>
-                </tr>
-                <tr>
-                    <td>10.</td>
-                    <td>Rajesh Modi</td>
-                    <td><input id="input28" type="text"></td>
-                    <td><input id="input29" type="text"></td>
-                    <td><input id="input30" type="text"></td>
-                    <td id="sub10_total"> </td>
-                    <td id="sub10_pre"> </td>
-                </tr>
-                
-            </table>
-            <button onclick="sum()">Sumbit</button>
+    <h2 class="text-center text">STUDENTS MARKSITE</h2> <br><br>
+    <table class="text-center" border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <td rowspan="2">No.</td>
+            <td rowspan="2">NAME</td>
+            <td colspan="3">SUBJECT</td>
+            <td colspan="2">RESULT</td>
+        </tr>
+        <tr>
+            <td>MATH</td>
+            <td>CHEMSTRY</td>
+            <td>PHYSIC</td>
+            <td>TOTAL</td>
+            <td>PERCENTAGE(%)</td>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>Vikash Modi</td>
+            <td><input id="input1" type="text"></td>
+            <td><input id="input2" type="text"></td>
+            <td><input id="input3" type="text"></td>
+            <td id="sub1_total"> </td>
+            <td id="sub1_pre"> </td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Vishal Modi</td>
+            <td><input id="input4" type="text"></td>
+            <td><input id="input5" type="text"></td>
+            <td><input id="input6" type="text"></td>
+            <td id="sub2_total"> </td>
+            <td id="sub2_pre"> </td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Nitin Patel</td>
+            <td><input id="input7" type="text"></td>
+            <td><input id="input8" type="text"></td>
+            <td><input id="input9" type="text"></td>
+            <td id="sub3_total"> </td>
+            <td id="sub3_pre"> </td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>Chirag Galchar</td>
+            <td><input id="input10" type="text"></td>
+            <td><input id="input11" type="text"></td>
+            <td><input id="input12" type="text"></td>
+            <td id="sub4_total"> </td>
+            <td id="sub4_pre"> </td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>Mukesh Patel</td>
+            <td><input id="input13" type="text"></td>
+            <td><input id="input14" type="text"></td>
+            <td><input id="input15" type="text"></td>
+            <td id="sub5_total"> </td>
+            <td id="sub5_pre"> </td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>Rahul Mali</td>
+            <td><input id="input16" type="text"></td>
+            <td><input id="input17" type="text"></td>
+            <td><input id="input18" type="text"></td>
+            <td id="sub6_total"> </td>
+            <td id="sub6_pre"> </td>
+        <tr>
+            <td>7.</td>
+            <td>Kundan Mevada</td>
+            <td><input id="input19" type="text"></td>
+            <td><input id="input20" type="text"></td>
+            <td><input id="input21" type="text"></td>
+            <td id="sub7_total"> </td>
+            <td id="sub7_pre"> </td>
+        </tr>
+        <tr>
+            <td>8.</td>
+            <td>Pratham Pawala</td>
+            <td><input id="input22" type="text"></td>
+            <td><input id="input23" type="text"></td>
+            <td><input id="input24" type="text"></td>
+            <td id="sub8_total"> </td>
+            <td id="sub8_pre"> </td>
+        </tr>
+        <tr>
+            <td>9.</td>
+            <td>Ravi Thakor</td>
+            <td><input id="input25" type="text"></td>
+            <td><input id="input26" type="text"></td>
+            <td><input id="input27" type="text"></td>
+            <td id="sub9_total"> </td>
+            <td id="sub9_pre"> </td>
+        </tr>
+        <tr>
+            <td>10.</td>
+            <td>Rajesh Modi</td>
+            <td><input id="input28" type="text"></td>
+            <td><input id="input29" type="text"></td>
+            <td><input id="input30" type="text"></td>
+            <td id="sub10_total"> </td>
+            <td id="sub10_pre"> </td>
+        </tr>
+    </table>
+    <div id="rd">
+        <button class="btn btn-danger" onclick="sum()">Sumbit</button>
+    </div>
     <script>
 
-        function sum(){
+        function sum() {
             let sub1_set1 = Number(document.getElementById('input1').value);
             let sub1_set2 = Number(document.getElementById('input2').value);
             let sub1_set3 = Number(document.getElementById('input3').value);
-            let allsub1 = sub1_set1+sub1_set2+sub1_set3;
+            let allsub1 = sub1_set1 + sub1_set2 + sub1_set3;
             let sub2_set1 = Number(document.getElementById('input4').value);
             let sub2_set2 = Number(document.getElementById('input5').value);
             let sub2_set3 = Number(document.getElementById('input6').value);
-            let allsub2 = sub2_set1+sub2_set2+sub2_set3;
+            let allsub2 = sub2_set1 + sub2_set2 + sub2_set3;
             let sub3_set1 = Number(document.getElementById('input7').value);
             let sub3_set2 = Number(document.getElementById('input8').value);
             let sub3_set3 = Number(document.getElementById('input9').value);
-            let allsub3 = sub3_set1+sub3_set2+sub3_set3;
+            let allsub3 = sub3_set1 + sub3_set2 + sub3_set3;
             let sub4_set1 = Number(document.getElementById('input10').value);
             let sub4_set2 = Number(document.getElementById('input11').value);
             let sub4_set3 = Number(document.getElementById('input12').value);
-            let allsub4 = sub4_set1+sub4_set2+sub4_set3;
+            let allsub4 = sub4_set1 + sub4_set2 + sub4_set3;
             let sub5_set1 = Number(document.getElementById('input13').value);
             let sub5_set2 = Number(document.getElementById('input14').value);
             let sub5_set3 = Number(document.getElementById('input15').value);
-            let allsub5 = sub5_set1+sub5_set2+sub5_set3;
+            let allsub5 = sub5_set1 + sub5_set2 + sub5_set3;
             let sub6_set1 = Number(document.getElementById('input16').value);
             let sub6_set2 = Number(document.getElementById('input17').value);
             let sub6_set3 = Number(document.getElementById('input18').value);
-            let allsub6 = sub6_set1+sub6_set2+sub6_set3;
+            let allsub6 = sub6_set1 + sub6_set2 + sub6_set3;
             let sub7_set1 = Number(document.getElementById('input19').value);
             let sub7_set2 = Number(document.getElementById('input20').value);
             let sub7_set3 = Number(document.getElementById('input21').value);
-            let allsub7 = sub7_set1+sub7_set2+sub7_set3;
+            let allsub7 = sub7_set1 + sub7_set2 + sub7_set3;
             let sub8_set1 = Number(document.getElementById('input22').value);
             let sub8_set2 = Number(document.getElementById('input23').value);
             let sub8_set3 = Number(document.getElementById('input24').value);
-            let allsub8 = sub8_set1+sub8_set2+sub8_set3;
+            let allsub8 = sub8_set1 + sub8_set2 + sub8_set3;
             let sub9_set1 = Number(document.getElementById('input25').value);
             let sub9_set2 = Number(document.getElementById('input26').value);
             let sub9_set3 = Number(document.getElementById('input27').value);
-            let allsub9 = sub9_set1+sub9_set2+sub9_set3;
+            let allsub9 = sub9_set1 + sub9_set2 + sub9_set3;
             let sub10_set1 = Number(document.getElementById('input28').value);
             let sub10_set2 = Number(document.getElementById('input29').value);
             let sub10_set3 = Number(document.getElementById('input30').value);
-            let allsub10 = sub10_set1+sub10_set2+sub10_set3;
+            let allsub10 = sub10_set1 + sub10_set2 + sub10_set3;
 
 
             document.getElementById('sub1_total').innerHTML = allsub1;
-            document.getElementById('sub1_pre').innerHTML = allsub1/3;
+            document.getElementById('sub1_pre').innerHTML = allsub1 / 3;
 
             document.getElementById('sub2_total').innerHTML = allsub2;
-            document.getElementById('sub2_pre').innerHTML = allsub2/3;
+            document.getElementById('sub2_pre').innerHTML = allsub2 / 3;
 
             document.getElementById('sub3_total').innerHTML = allsub3;
-            document.getElementById('sub3_pre').innerHTML = allsub3/3;
+            document.getElementById('sub3_pre').innerHTML = allsub3 / 3;
 
             document.getElementById('sub4_total').innerHTML = allsub4;
-            document.getElementById('sub4_pre').innerHTML = allsub4/3;
+            document.getElementById('sub4_pre').innerHTML = allsub4 / 3;
 
             document.getElementById('sub5_total').innerHTML = allsub5;
-            document.getElementById('sub5_pre').innerHTML = allsub5/3;
+            document.getElementById('sub5_pre').innerHTML = allsub5 / 3;
 
             document.getElementById('sub6_total').innerHTML = allsub6;
-            document.getElementById('sub6_pre').innerHTML = allsub6/3;
+            document.getElementById('sub6_pre').innerHTML = allsub6 / 3;
 
             document.getElementById('sub7_total').innerHTML = allsub7;
-            document.getElementById('sub7_pre').innerHTML = allsub7/3;
+            document.getElementById('sub7_pre').innerHTML = allsub7 / 3;
 
             document.getElementById('sub8_total').innerHTML = allsub8;
-            document.getElementById('sub8_pre').innerHTML = allsub8/3;
+            document.getElementById('sub8_pre').innerHTML = allsub8 / 3;
 
             document.getElementById('sub9_total').innerHTML = allsub9;
-            document.getElementById('sub9_pre').innerHTML = allsub9/3;
+            document.getElementById('sub9_pre').innerHTML = allsub9 / 3;
 
             document.getElementById('sub10_total').innerHTML = allsub10;
-            document.getElementById('sub10_pre').innerHTML = allsub10/3;
+            document.getElementById('sub10_pre').innerHTML = allsub10 / 3;
 
         }
 
@@ -217,4 +252,5 @@
 
     </script>
 </body>
+
 </html>

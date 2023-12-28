@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Input Basic of an Employee And Calulate its Salry Accroding To Follwing:</p>
+    <table cellpadding="15">
+        <tr>
+            <td>Basic sallry</td>
+            <td>HRA</td>
+            <TD>DA</TD>
+        </tr>
+        <tr>
+            <td>10000</td>
+            <td>20%</td>
+            <td>80%</td>
+        </tr>
+        <tr>
+            <td>20000</td>
+            <td>25%</td>
+            <td>80%</td>
+        </tr>
+        <tr>
+            <td>20000 se uper</td>
+            <td>30%</td>
+            <td>95%</td>
+        </tr>
+    </table>
+    <h2 id="demo1"></h2>
+    <h2 id="demo2"></h2>
+    <h2 id="demo3"></h2>
+
+    <button onclick="fun()">Sumbit</button>
+    <h2 id="demo4"></h2>
+</body>
+<script>
+    function fun(){
+        let sallry = Number(prompt('enter a sallry'));
+        
+        console.log((sallry*20)/(100));
+        console.log((sallry*80)/(100));
+      
+    }
+</script>
+</html>
