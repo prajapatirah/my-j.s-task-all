@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button onclick="fun()">Sumbit</button>
+    <h1></h1>
+    <script>
+        function fun(){
+            let val = document.querySelector('input').value;
+            if(val%4 == 0){
+                document.querySelector('h1').innerHTML = "This is leap year.."
+            }
+            else{
+                document.querySelector('h1').innerHTML = "This is not leap year.."
+            }
+        }
+    </script>
+</body>
+</html>

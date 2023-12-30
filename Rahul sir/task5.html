@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/cdn.jsdelivr.net_npm_bootstrap@4.6.2_dist_css_bootstrap.min.css">
+</head>
+<body>
+
+        <div class="card">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3">
+                                <label class="text-center">Enrollment No.</label>
+                                <input id="input1" class="form-control" type="text">
+                            </div>
+                            <div class="col-3">
+                                <label class="text-center">Your Name:</label>
+                                <input id="input2" class="form-control" type="text">
+                            </div>
+                            <div class="col-3">
+                                <label class="text-center">Father Name:</label>
+                                <input id="input3" class="form-control" type="text">
+                            </div>
+                            <div class="col-3">
+                                <label class="text-center">Surname:</label>
+                                <input id="input4" class="form-control" type="text">
+                            </div>
+                            <div class="col-3">
+                                <label class="text-center">Birth Date:</label>
+                                <input id="input5" class="form-control" type="date">
+                            </div>
+                            <div class="col-3">
+                                <label class="text-center">Fild Select:</label>
+                                <select id="select1" class="form-control" name="" id="">
+                                    <option value="--">--</option>
+                                    <option value="Arts">Arts</option>
+                                    <option value="Commers">Commers</option>
+                                    <option value="Since">Since</option>
+                                </select>
+                            </div>
+                            <div class="col-3">
+                                <label class="text-center">Mo No:</label>
+                                <input id="input6" class="form-control" type="text">
+                            </div>
+                            <div class="col-3">
+                                <label class="text-center">City:</label>
+                                <select id="select2" class="form-control" name="" id="">
+                                    <option value="--">--</option>
+                                    <option value="Deesa">Deesa</option>
+                                    <option value="Planpur">Planpur</option>
+                                    <option value="Patan">Patan</option>
+                                </select>
+                            </div>
+                            <div class="col-3">
+                                <label for="">Hobby :  </label>
+                                <input type="checkbox" value="" name="Dancing" id="checkbox1"> Dancing
+                                <input type="checkbox" value="Singing" name="Singing" id="checkbox2"> Singing
+                                <input type="checkbox" value="Learnig" name="" id="checkbox3"> Learnig
+                           
+                            </div>
+                            <div class="col-3">
+                                <label class="text-center">Address:</label>
+                                <textarea class="form-control" name="" id="textarea" cols="30" rows="2"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <center> <button class="btn btn-lg btn-dark mt-4" onclick="sum()">Sumbit</button></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <table border="2" cellpadding="10" width="100%" id="table">
+        <tr>
+            <td>Enrollment NO:</td>
+            <td>Your Name:</td>
+            <td>Father Name:</td>
+            <td>Surname:</td>
+            <td>Birth Date:</td>
+            <td>Fild Select:</td>
+            <td>Mo No:</td>
+            <td>City:</td>
+            <td>Hobby :</td>
+            <td>Address:</td>
+        </tr>
+    </table>
+</body>
+<script>
+    function sum(){
+        let no = document.getElementById('input1').value;
+        let Yname = document.getElementById('input2').value;
+        let Fname = document.getElementById('input3').value;
+        let Sname = document.getElementById('input4').value;
+        let bob = document.getElementById('input5').value;
+        let fild = document.getElementById('select1').value;
+        let mno = document.getElementById('input6').value;
+        let city = document.getElementById('select2').value;
+        let check1 = document.getElementById('checkbox1').value;
+        let check2 = document.getElementById('checkbox2').value;
+        let check3 = document.getElementById('checkbox3').value;
+        let textarea = document.getElementById('textarea').value;
+        document.getElementById('table').innerHTML += `
+        <tr>
+            <td>
+                ${no}
+             </td>   
+            <td>
+                ${Yname}
+             </td>   
+            <td>
+                ${Yname}
+             </td>   
+            <td>
+                ${Sname}
+             </td>   
+            <td>
+                ${bob}
+             </td>   
+            <td>
+                ${fild}
+             </td>   
+            <td>
+                ${mno}
+             </td>   
+            <td>
+                ${city}
+             </td>   
+            <td>
+                ${check1 , check2 , check3}
+             </td>   
+            <td>
+                ${textarea}
+             </td>   
+        </tr>`
+    }
+</script>
+</html>

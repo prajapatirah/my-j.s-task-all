@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <button onclick="addition()">a+=b</button>
+    <button onclick="sub()">a-=b</button>
+    <button onclick="sub2()">b-=b</button>
+    <button onclick="mul()">a*=b</button>
+    <button onclick="div()">a/=b</button>
+    <button onclick="mod()">a%=b</button>
+    <button onclick="mul2()">a**=b</button>
+    <h1 id="demo"></h1>
+</body>
+<script>
+    function addition(){
+        let a = document.getElementById('input1').value;
+        let b = document.getElementById('input2').value;
+        a+=b
+        document.getElementById('demo').innerHTML = '(a = a+b) = '+b
+    }
+    function sub(){
+        let a = document.getElementById('input1').value;
+        let b = document.getElementById('input2').value;
+        a-=b
+        document.getElementById('demo').innerHTML = '(a = a-b) = '+a
+    }
+    function sub2(){
+        let a = document.getElementById('input1').value;
+        let b = document.getElementById('input2').value;
+        b-=b
+        document.getElementById('demo').innerHTML = '(b = b-b) = '+b
+    }
+    function mul(){
+        let a = document.getElementById('input1').value;
+        let b = document.getElementById('input2').value;
+        a*=b
+        document.getElementById('demo').innerHTML = '(a = a*b) = '+a
+    }
+    function div(){
+        let a = document.getElementById('input1').value;
+        let b = document.getElementById('input2').value;
+        a/=b
+        document.getElementById('demo').innerHTML = '(a = a/b) = '+a
+    }
+    function mod(){
+        let a = document.getElementById('input1').value;
+        let b = document.getElementById('input2').value;
+        a%=b
+        document.getElementById('demo').innerHTML = '(a = a%b) = '+a
+    }
+    function mul2(){
+        let a = document.getElementById('input1').value;
+        let b = document.getElementById('input2').value;
+        a**=b
+        document.getElementById('demo').innerHTML = '(a = a**b) = '+a
+    }
+</script>
+</html>

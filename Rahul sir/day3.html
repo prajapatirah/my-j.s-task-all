@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .button{
+            position: absolute;
+            top: 90%;
+            left: 40%;
+        }
+        .button1{
+            position: absolute;
+            top: 90%;
+            left: 45%;
+        }
+        img{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img id="imgon" src="https://www.freeiconspng.com/thumbs/lightbulb-png/light-bulb-png-bulb-png1247-12.png" width="255px" alt="">
+    <button class="button" onclick="off()">Off Light</button>
+    <button class="button1" onclick="on()">On Light</button>
+</body>
+<script>
+    function off(){
+        document.getElementById('imgoff').style.display = 'block'
+        document.getElementById('imgon').style.display = 'none'
+    }
+    function on(){
+        document.getElementById('imgon').style.display = 'block'
+        document.getElementById('imgoff').style.display = 'none'
+    }
+</script>
+</html>
